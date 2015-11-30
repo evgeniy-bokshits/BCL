@@ -1,0 +1,6 @@
+C:\Users\Yauheni_Bokshyts\Documents\Visual Studio 2013\Projects\MentPr\BCLtask1\BCLtask1\bin\Debug\BCLtask1.exe.config
+C:\Users\Yauheni_Bokshyts\Documents\Visual Studio 2013\Projects\MentPr\BCLtask1\BCLtask1\bin\Debug\BCLtask1.exe
+C:\Users\Yauheni_Bokshyts\Documents\Visual Studio 2013\Projects\MentPr\BCLtask1\BCLtask1\bin\Debug\BCLtask1.pdb
+C:\Users\Yauheni_Bokshyts\Documents\Visual Studio 2013\Projects\MentPr\BCLtask1\BCLtask1\obj\Debug\BCLtask1.csprojResolveAssemblyReference.cache
+C:\Users\Yauheni_Bokshyts\Documents\Visual Studio 2013\Projects\MentPr\BCLtask1\BCLtask1\obj\Debug\BCLtask1.exe
+C:\Users\Yauheni_Bokshyts\Documents\Visual Studio 2013\Projects\MentPr\BCLtask1\BCLtask1\obj\Debug\BCLtask1.pdb
