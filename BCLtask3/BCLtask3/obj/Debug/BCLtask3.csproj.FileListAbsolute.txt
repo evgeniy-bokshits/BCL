@@ -1,1 +1,7 @@
 C:\Users\Yauheni_Bokshyts\Documents\Visual Studio 2013\Projects\MentPr\BCLtask3\BCLtask3\bin\Debug\BCLtask3.exe.config
+I:\MP\BCLtask3\BCLtask3\bin\Debug\BCLtask3.exe.config
+I:\MP\BCLtask3\BCLtask3\bin\Debug\BCLtask3.exe
+I:\MP\BCLtask3\BCLtask3\bin\Debug\BCLtask3.pdb
+I:\MP\BCLtask3\BCLtask3\obj\Debug\BCLtask3.csprojResolveAssemblyReference.cache
+I:\MP\BCLtask3\BCLtask3\obj\Debug\BCLtask3.exe
+I:\MP\BCLtask3\BCLtask3\obj\Debug\BCLtask3.pdb

@@ -8,21 +8,29 @@ namespace BCLtask3
 {
   class Program
   {
-    static void Main(string[] args)
+        /*
+        Напишите метод для конкатенации каждого второго элемента массива строк в результирующую строку. 
+        Обоснуйте выбор реализации. Использование Linq запрещено.
+        */
+        static void Main(string[] args)
     {
       string[] stringTests = new string[5];
 
       for (int i = 0; i < stringTests.Length; i++)
       {
-        stringTests[i] = i+1.ToString();
+        stringTests[i] = (i+1).ToString();
       }
 
-      Console.WriteLine(ConcatEverySecond(stringTests));
+      Console.WriteLine("Original string: " + String.Join(",", stringTests));
+
+      Console.WriteLine("After concat: " + ConcatEverySecond(stringTests));
 
       Console.ReadKey();
     }
 
-    //испльзую StringBuilder т.к. он не создает в куче новых объектов при изменении содержимого строки (расширяется до определенного capacity, в дальнейшем эта capacity, при необходимости, увеличивается)
+        /*испльзую StringBuilder т.к. он не создает в куче новых объектов 
+        при изменении содержимого строки (расширяется до определенного capacity, 
+            в дальнейшем эта capacity, при необходимости, увеличивается)*/
 
     private static string ConcatEverySecond(string[] arr)
     {
@@ -30,7 +38,7 @@ namespace BCLtask3
 
       for (int i = 0; i < arr.Length; i++)
       {
-        if(i % 2 == 0)
+        if((i+1) % 2 == 0)
           result.Append(arr[i]);
       }
 

@@ -8,43 +8,43 @@ using System.Threading.Tasks;
 
 namespace BCLtask2
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      string[] testStrings = new string[3];
+        /*
+        Напишите метод для сортировки массива строк в независимости 
+        от региональных стандартов пользователя. Использование Linq запрещено.
+        */
+        static void Main(string[] args)
+        {
+            String[] stringsForTest = { "case",  "encyclopædia",
+                            "encyclopædia", "Archæology", "Case", "encyclopaedia",
+                            "encyclopedia" , "ARCHÆOLOGY" };
 
-      double value = 1634.92;
-      Thread.CurrentThread.CurrentCulture = new CultureInfo("fr-CA");
-      Console.WriteLine("Current Culture: {0}",
-                        CultureInfo.CurrentCulture.Name);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("ru-RU");
+            Console.WriteLine("Current Culture: {0}",
+                              CultureInfo.CurrentCulture.Name);
 
-      testStrings[0] = value.ToString();
+            List<String> list = ConvertToInvariantCulture(stringsForTest);
 
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
 
-      Thread.CurrentThread.CurrentCulture = new CultureInfo("fr");
-      Console.WriteLine("Current Culture: {0}",
-                        CultureInfo.CurrentCulture.Name);
+            Console.ReadKey();
+        }
 
-      testStrings[1] = value.ToString();
+        private static List<String> ConvertToInvariantCulture(string[] arr)
+        {
+            List<String> list = new List<string>(arr);
+            list.Sort(CustomCompare);
+            return list;
+        }
 
-      ConvertToInvariantCulture(testStrings);
-
-      for (int i = 0; i < testStrings.Length; i++)
-      {
-        Console.WriteLine(testStrings[i]);
-      }
-
-      Console.ReadKey();
+        // Custom compare
+        public static int CustomCompare(String x, String y)
+        {
+            return String.Compare(x, y, StringComparison.OrdinalIgnoreCase);
+        }
     }
-
-    private static void ConvertToInvariantCulture(string[] arr)
-    {
-      for (int i = 0; i < arr.Length; i++)
-      {
-        arr[i] = arr[i].ToString(CultureInfo.InvariantCulture);
-      }
-    }
-
-  }
 }
